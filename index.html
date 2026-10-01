@@ -1,1 +1,31 @@
-
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brilhartes — canecas personalizadas, presentes e artes feitas com carinho.">
+  <title>Brilhartes | Presentes com significado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">B</span><span>brilhartes<small>presentes com significado</small></span></a>
+<nav><a href="#produtos">Produtos</a><a href="#como-funciona">Como funciona</a><a href="#contato">Contato</a></nav>
+<div class="nav-actions"><button class="btn btn-light" id="loginOpen">Entrar</button><button class="btn btn-dark" id="signupOpen">Criar conta</button><button class="btn btn-light hidden" id="logoutBtn">Sair</button></div>
+</header>
+<main>
+<section class="hero"><div class="hero-copy"><span class="eyebrow">FEITO PARA PRESENTEAR</span><h1>Pequenos detalhes.<br><em>Grandes lembranças.</em></h1><p>Canecas personalizadas, presentes e artes criadas para transformar momentos em algo inesquecível.</p><div class="hero-actions"><a class="btn btn-dark" href="#produtos">Explorar produtos <span>↗</span></a><a class="text-link" href="#como-funciona">Como encomendar</a></div><div class="trust"><span>✦ Personalização cuidadosa</span><span>✦ Atendimento próximo</span></div></div><div class="hero-art"><div class="sun"></div><div class="hero-note">feito à mão<br>com afeto</div><div class="mug"><div class="mug-print">um mimo<br><b>especial</b><span>✿</span></div><div class="mug-handle"></div></div><div class="art-leaf leaf-one">✳</div><div class="art-leaf leaf-two">✿</div><div class="art-caption">BRILHARTES · DESDE 2026</div></div></section>
+<section class="benefits"><div><b>01</b><span>Personalize do seu jeito</span></div><div><b>02</b><span>Encomende com facilidade</span></div><div><b>03</b><span>Presenteie com intenção</span></div></section>
+<section class="section" id="produtos"><div class="section-heading"><div><span class="eyebrow">NOSSA SELEÇÃO</span><h2>Feitos para encantar</h2></div><p>Escolha uma inspiração e conte como gostaria de personalizar.</p></div><div class="filters"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Canecas">Canecas</button><button class="filter" data-filter="Presentes">Presentes</button><button class="filter" data-filter="Artes">Artes</button></div><div class="product-grid" id="productGrid"></div></section>
+<section class="custom"><div><span class="eyebrow">SUA IDEIA, NOSSA ARTE</span><h2>Imaginou algo único?</h2><p>Descreva sua ideia, escolha cores e envie referências. Vamos conversar sobre sua encomenda personalizada.</p><button class="btn btn-cream" id="customOrder">Solicitar encomenda personalizada ↗</button></div><div class="custom-stamp">feito<br>especialmente<br><strong>para você</strong><span>✦</span></div></section>
+<section class="section steps" id="como-funciona"><span class="eyebrow">SIMPLES ASSIM</span><h2>Como funciona</h2><div class="step-grid"><article><b>01</b><h3>Escolha</h3><p>Explore os produtos e selecione sua inspiração.</p></article><article><b>02</b><h3>Personalize</h3><p>Informe nome, frase, tema ou detalhes desejados.</p></article><article><b>03</b><h3>Confirme</h3><p>Envie o pedido e acompanhe o retorno pelo WhatsApp.</p></article></div></section>
+<section class="account-area hidden" id="accountArea"><div class="section-heading"><div><span class="eyebrow">ÁREA DO CLIENTE</span><h2>Minhas encomendas</h2></div><span id="welcome"></span></div><div id="ordersList" class="orders-list"></div></section>
+<section class="account-area hidden" id="adminArea"><div class="section-heading"><div><span class="eyebrow">ACESSO RESTRITO</span><h2>Painel administrativo</h2></div></div><p>Pedidos recebidos</p><div id="adminOrders" class="orders-list"></div></section>
+<section class="contact" id="contato"><span class="eyebrow">VAMOS CONVERSAR</span><h2>Seu próximo presente começa aqui.</h2><p>Fale com a Brilhartes para tirar dúvidas ou combinar detalhes da sua encomenda.</p><a class="btn btn-dark" id="whatsLink" target="_blank" rel="noopener">Conversar no WhatsApp ↗</a></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">B</span><span>brilhartes<small>presentes com significado</small></span></a><span>© 2026 Brilhartes. Feito com cuidado.</span><a href="#top">Voltar ao início ↑</a></footer>
+<a class="whatsapp-float" id="floatWhats" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+<div class="modal hidden" id="authModal"><div class="modal-card"><button class="modal-close" id="modalClose" aria-label="Fechar">×</button><span class="eyebrow">BEM-VINDO À BRILHARTES</span><h2 id="authTitle">Entre na sua conta</h2><form id="authForm"><label id="nameLabel" class="hidden">Nome completo<input id="authName" autocomplete="name"></label><label>E-mail<input id="authEmail" type="email" required autocomplete="email"></label><label>Senha<input id="authPassword" type="password" minlength="6" required autocomplete="current-password"></label><button class="btn btn-dark full" id="authSubmit">Entrar</button></form><p class="switch-auth" id="authSwitch">Ainda não tem conta? <button id="switchMode">Cadastre-se</button></p><p class="form-message" id="authMessage" role="status"></p></div></div>
+<div class="modal hidden" id="orderModal"><div class="modal-card"><button class="modal-close" id="orderClose" aria-label="Fechar">×</button><span class="eyebrow">ENCOMENDA PERSONALIZADA</span><h2>Conte sua ideia</h2><form id="orderForm"><label>Produto<input id="orderProduct" required></label><label>Como deseja personalizar?<textarea id="orderDetails" rows="4" required placeholder="Tema, nome, frase, cores, quantidade..."></textarea></label><label>Prazo desejado<input id="orderDeadline" type="date"></label><button class="btn btn-dark full">Enviar solicitação</button></form><p class="form-message" id="orderMessage" role="status"></p></div></div>
+<script type="module" src="script.js"></script>
+</body></html>
